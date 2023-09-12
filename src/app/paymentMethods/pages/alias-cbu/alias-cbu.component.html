@@ -1,0 +1,30 @@
+<section class="alias-cbu">
+  <img  class="alias-cbu-img" src="../../../../assets/Logo-verde.png" alt="logo-Manija-verde">
+  <div class="alias-cbu__info">
+    <p class="alias-cbu__info__text">
+      "Ayuda a que esta comunidad siga creciendo!"
+      <br>Monto sugerido: <strong>$500</strong>
+    </p>
+    <ul class="alias-cbu__info__list">
+      <!-- ALIAS -->
+      <li class="alias-cbu__info__list__item">
+        <strong>los.manijas.del.rol</strong>
+        <span class="alias-cbu__info__list__item__btn" [cdkCopyToClipboard]="copyText(alias)" (click)="showMessage('Alias')">
+          <i class="fa-regular fa-copy"></i> Alias
+        </span>
+      </li>
+      <!-- CBU -->
+      <li class="alias-cbu__info__list__item">
+        <strong>0000003100077822682499</strong>
+        <span class="alias-cbu__info__list__item__btn" [cdkCopyToClipboard]="copyText(cbu)" (click)="showMessage('Cbu')">
+          <i class="fa-regular fa-copy"></i> Cbu
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="alias-cbu__message" [ngClass]=" {'alias-cbu__message-active': isMessageShowed}" >
+    <span class="alias-cbu__message__field"> {{message}} </span>
+    <p>Gracias por colaborar! :)</p>
+  </div>
+</section>

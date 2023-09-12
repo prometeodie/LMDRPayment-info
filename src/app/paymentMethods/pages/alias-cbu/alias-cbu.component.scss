@@ -1,0 +1,108 @@
+
+
+.alias-cbu,
+.alias-cbu-img{
+  width: 100vw;
+  height: 100vh;
+}
+
+.alias-cbu__info,
+.alias-cbu-img{
+  position: absolute;
+}
+
+.alias-cbu,
+.alias-cbu__info,
+.alias-cbu__info__list{
+  flex-direction: column;
+}
+
+.alias-cbu,
+.alias-cbu__info,
+.alias-cbu__info__list,
+.alias-cbu__info__list__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alias-cbu__info__list,
+.alias-cbu__info__list__item{
+  width: 100%;
+}
+
+.alias-cbu{
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  // background: linear-gradient(90deg, rgba(189,69,97,1) 0%, rgba(10,217,108,1) 50%, rgba(106,82,168,1) 100%);
+
+    &__info{
+      width: 90%;
+      padding: 2rem;
+      gap: 1rem;
+      background-color: rgba(0, 0, 0, 0.514);
+      backdrop-filter: blur(10px);
+
+        &__list{
+          list-style: none;
+          height: 6rem;
+          gap: 1rem;
+
+            &__item{
+              font-size: smaller;
+              padding: 0.5rem;
+
+              &:hover{
+                background-color: #bbbbbb71;
+              }
+
+              &__btn{
+                padding: 0.5rem;
+                background: #973351;
+                border-radius: 3px;
+                margin-left: 0.5rem;
+                cursor: pointer;
+
+                &:hover{
+                  transform: scale(1.1);
+                  background-color: #c7466d;
+                }
+
+                &:active{
+                  transform: scale(0.9);
+                }
+              }
+
+            }
+        }
+
+        &__text{
+          text-align: center;
+        }
+    }
+
+    &__message{
+      background-color: rgba(151, 51, 81, 0.774);
+      border-radius: 5px;
+      color: #fff;
+      display: none;
+      padding: 3rem 4rem;
+      position: absolute;
+      text-align: center;
+
+      &__field{
+        margin: 1rem;
+      }
+    }
+
+    &__message-active{
+      position: absolute;
+      display: block;
+    }
+}
+
+.alias-cbu-img{
+  object-fit: cover;
+  max-width: 700px;
+}
